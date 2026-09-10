@@ -25,9 +25,17 @@ CREATE TABLE products (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Insert sample product
+-- Insert CaffeineLab Products
 INSERT INTO products (name_en, name_ka, description_en, description_ka, price, image) VALUES
-('Lavazza Crema e Aroma', 'ლავაზა ქრემა ე არომა', 'Premium Italian bean coffee with rich, smooth flavor profile. Imported directly from EU. Perfect for espresso or regular brewing.', 'პრემიუმ იტალიური ყავის მარცვალი მდიდარი, გლუვი გემოთი. პირდაპირ ევროპიდან იმპორტირებული. ნიშიერი ან ჩვეულებრივი დასხმის მოსამზადებლად იდეალური.', 70, '☕');
+('Lavazza Crema e Aroma', 'ლავაზა კრემა ე არომა', 'Premium Italian bean coffee with rich, smooth flavor profile. Imported directly from EU. Perfect for espresso or regular brewing.', 'პრემიუმ იტალიური ყავის მარქვალი, გლუფი გემოტი. პირდაპირ ევროპიდან იმპორტირებული. მნიშვნელი ან ჩვეულებრივი დაშხმისთვის იდეალური.', 70, '☕'),
+('Lavazza Crema e Gusto Classico', 'ლავაზა კრემა ე გუსტო კლასიკო', 'Classic Italian blend with balanced taste and smooth crema. Timeless favorite for coffee lovers. Imported from EU.', 'კლასიკური იტალიური ღია, დაბალანსებული გემოთი და გლუფი კრემით. ძველი ოჩეჩი ყავის მოყვარულთათვის. ევროპიდან იმპორტირებული.', 70, '☕'),
+('Lavazza Super Crema', 'ლავაზა სუპერ კრემა', 'Premium blend with notes of hazelnut and brown sugar. Creates perfect crema for espresso. Premium quality from Italy.', 'პრემიუმ ღია ნიჟარის და ყავიანი შაქრის ტონებით. იდეალური ფოამი ესპრესოსთვის. იტალიური ხარისხი.', 75, '☕'),
+('Lavazza Rosa Espresso', 'ლავაზა როზა ესპრესო', 'Smooth and aromatic espresso blend with mild flavor. Perfect for daily coffee enjoyment. Imported from Italy.', 'გლუფი და არომატული ესპრესო ღია მხოლოდ გემოთი. ყოველდღიური ყავის სიამოვნებისთვის სრულყოფილი. იტალიით იმპორტირებული.', 70, '☕'),
+('Lavazza Espresso Italiano Cremoso', 'ლავაზა ესპრესო იტალიანო კრემოზო', 'Creamy Italian espresso with rich body and full flavor. Perfect crema for true espresso lovers. Premium EU import.', 'კრემიანი იტალიური ესპრესო მდიდარი სხეულით და სრული გემოთი. სამართავი ესპრესო მოყვარულთათვის. პრემიუმ ევროპული იმპორტი.', 75, '☕'),
+('Lavazza Espresso Barista', 'ლავაზა ესპრესო ბარისტა', 'Professional barista-grade espresso blend with intense flavor and perfect crema. Ideal for espresso machines. From Italy.', 'პროფესიონალური ბარისტა-კლასის ესპრესო ღია ინტენსიური გემოთი. ესპრესო მანქანებისთვის იდეალური. იტალიის კოფერ.', 75, '☕'),
+('Illy Intense', 'ილი ინტენსი', 'Premium ground coffee with intense, bold flavor. 250g pack. Perfect for filter coffee and espresso. From EU.', 'პრემიუმ დაფქული ყავა ინტენსიური, დამამშვიდებელი გემოთი. 250გ პაკი. ფილტრისა და ესპრესოს ყავისთვის სამართავი. ევროპიდან.', 30, '☕'),
+('Dallmayr Prodomo Intensiv', 'დალმაიერი პროდომო ინტენსივი', 'German quality ground coffee with intense taste. 500g pack. Premium roast for strong coffee lovers. Imported from Germany.', 'გერმანული ხარისხის დაფქული ყავა ინტენსიური გემოთი. 500გ პაკი. პრემიუმ როსტი ძლიერი ყავის მოყვარულებისთვის. გერმანიის იმპორტი.', 35, '☕'),
+('Dallmayr Prodomo', 'დალმაიერი პროდომო', '100% Arabica ground coffee with smooth, balanced flavor. 500g pack. Premium German quality. Perfect for daily brewing.', '100% არაბიკა დაფქული ყავა გლუფი, დაბალანსებული გემოთი. 500გ პაკი. პრემიუმ გერმანული ხარისხი. ყოველდღიური დასხმისთვის იდეალური.', 35, '☕');
 ```
 
 ### Step 3: Get API Keys
@@ -50,24 +58,26 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key_here
 npm install @supabase/supabase-js
 ```
 
-### Step 6: Access Admin Panel
+### Step 6: Redeploy on Vercel
 
-After deploying:
-- **Shop**: `yoursite.vercel.app/shop`
-- **Admin**: `yoursite.vercel.app/admin`
+After adding environment variables, trigger a redeploy on Vercel.
 
-## Add Your Products
+### Step 7: Access Your Site
 
-In the Admin Panel (`/admin`):
-1. Click "➕ Add New Product"
-2. Fill in product details (English & Georgian)
-3. Set price in Lari (₾)
-4. Choose emoji icon
-5. Click "✅ Add Product"
+- **Shop**: `yoursite.vercel.app/shop` - See all 9 products!
+- **Admin**: `yoursite.vercel.app/admin` - Add/edit/delete products
 
-## That's it! 🎉
+## Your Products Ready! 🎉
 
-Your products are now live in the shop! Customers can see them and add to cart.
+✅ Lavazza Crema e Aroma (70 lari/kg)  
+✅ Lavazza Crema e Gusto Classico (70 lari/kg)  
+✅ Lavazza Super Crema (75 lari/kg)  
+✅ Lavazza Rosa Espresso (70 lari/kg)  
+✅ Lavazza Espresso Italiano Cremoso (75 lari/kg)  
+✅ Lavazza Espresso Barista (75 lari/kg)  
+✅ Illy Intense (30 lari/250g)  
+✅ Dallmayr Prodomo Intensiv (35 lari/500g)  
+✅ Dallmayr Prodomo (35 lari/500g)  
 
 ---
 
